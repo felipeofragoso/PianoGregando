@@ -123,6 +123,7 @@ header input {
   }
   header {
     flex-direction: column;
+    align-items: center;
   }
   header :where(h2, .column) {
     margin-bottom: 13px;
@@ -132,9 +133,6 @@ header input {
   }
   .piano-keys {
     margin-top: 20px;
-  }
-  .piano-keys .key:where(:nth-child(9), :nth-child(10)) {
-    display: none;
   }
   .piano-keys .black {
     height: 100px;
@@ -148,14 +146,23 @@ header input {
 }
 
 @media screen and (max-width: 615px) {
-  .piano-keys .key:nth-child(13),
-  .piano-keys .key:nth-child(14),
-  .piano-keys .key:nth-child(15),
-  .piano-keys .key:nth-child(16),
-  .piano-keys .key :nth-child(17) {
-    display: none;
-  }
   .piano-keys .white {
     width: 50px;
   }
-} 
+  .piano-keys .black {
+    width: 35px;
+    height: 90px;
+    margin: 0 -17.5px 0 -17.5px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .piano-keys .white {
+    width: 40px;
+  }
+  .piano-keys .black {
+    width: 30px;
+    height: 80px;
+    margin: 0 -15px 0 -15px;
+  }
+}
